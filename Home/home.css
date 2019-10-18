@@ -1,83 +1,137 @@
-body {
-  /*
-    background-image: url("img/home_background.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    overflow: hidden;
-*/
-  margin: 0px 0px 0px 0px;
-/*  text-align: center;*/
-  background-color: #ECDED0;
-}
+body {position: absolute;
+    margin: 0;
+    padding: 0;
 
-nav {
-    width: 100%;
-    height: 32px;
-    background: rgba(0,0,0,0.2);
-}
-header {
-  width: 100%;
-  height: 350px;
-}
-aside {
-  height: 400px;
-  width: 300px;
-  border: 5px solid white;
-  border-radius: 10px;
-  background-color: #9E7869;
-  opacity: 0.3;
-  margin-left: 50px;
-  margin-top: 30px;
-  float: left;
-}
-section {
-  width: 700px;
-  height: 80px;
-  border: 5px solid rgba(0,0,0,0.3);
-  border-radius: 10px;
-  background-color: #9E7869;
-  /*  opacity: 0.3;*/
-  float: right;
-  margin-top: 50px;
-  margin-right: 150px;
-  text-align: left;
-  line-height: 80px;
-  font-size: 70px;
-}
-footer {
+    width: 1366px;
+    height: 900px;
 
+    background-color: rgba(236,222,208,0.5);
 }
-.banner {
+#banner {position: absolute;
     width: 100%;
+    height: 50%;
+
     background-image: url("img/home_background.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.nav_font {
-  color: white;
-  font-family: "Lucida Console";
-  font-size: 14px;
-  line-height: 32px;
-  margin-left: 3%;
+nav {position: absolute;
+    width: 100%;
+    height: 8%;
+
+    background-color: rgba(0,0,0,0.2);
 }
-.header_font {
-  color: white;
-  font-family: "Lucida Console";
-  font-size: 64px;
-  font-weight: bold;
-  margin-top: 10%;
+#nav_font {position: absolute;
+    top: 11px;
+    left: 3%;
+
+    margin: 0;
+
+    color: white;
+    font-family: "Lucida Console";
+    font-size: 14px;
+    line-height: 14px;
 }
-.header_form {
-  margin-top: 0%;
+header {position: absolute;
+    top: 8%;
+
+    width: 100%;
+    height: 92%;
 }
-.header_form>input {
-  width: 600px;
-  height: 50px;
-  background: rgba(0,0,0,0);
-  border: 2px solid white;
-  text-align: left;
-  border-radius: 5px;
-  color: #FFFFFF;
-  text-indent: 10px;
-  font-size: 24px;
+#header_title {position: absolute;
+    top: 30%;
+
+    margin: 0;
+
+    width: 100%;
+
+    color: white;
+    font-family: "Lucida Console";
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: bold;
+    text-align: center;
+}
+#header_search {position: absolute;
+    top: 65%;
+    left: 30%;
+    right: 30%;
+
+    border: 2px solid white;
+    border-radius: 5px;
+
+    width: 40%;
+    height: 48px;
+
+    background-color: rgba(0,0,0,0);
+
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: left;
+    text-indent: 10px;
+}
+#header_copyright {position: absolute;
+    bottom: 2%;
+    left: 1%;
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.5);
+    font-family: "Lucida Console";
+    font-size: 14px;
+    line-height: 14px;
+    text-align: left;
+}
+#content {position: absolute;
+    top: 50%;
+
+    width: 100%;
+    height: 46%;
+}
+aside {position: absolute;
+    top: 8%;
+    left: 3%;
+
+    border: 5px solid rgba(255,255,255,0.8);
+    border-radius: 10px;
+
+    width: 20%;
+    height: 80%;
+
+    background-color: rgba(212,192,177,1);
+}
+article {position: absolute;
+    top: 10%;
+    right: 5%;
+
+    border: 2px solid white;
+    border-radius: 5px;
+
+    width: 60%;
+    height: 20%;
+
+    background-color: #9E7869;
+    opacity: 0.3;
+}
+footer {position: absolute;
+    top: 96%;
+
+    width: 100%;
+    height: 4%;
+
+    background-color: rgba(200,158,136,0.1);
+}
+#footer_text {position: absolute;
+    bottom: 6px;
+
+    margin: 0;
+
+    width: 100%;
+
+    color: black;
+    font-family: "Lucida Console";
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
 }
