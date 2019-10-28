@@ -4,12 +4,12 @@ function documentReadyFunction () {
     "use strict";
 
 
-    var screenWidth = screen.availWidth, screenHeight = screen.availHeight;
-    if (screenWidth > 640) { // 电脑
-        $("body").css({"width":screenWidth+"px", "height":screenHeight+"px"});
-    } else { // 手机
-        $("body").css({"width":screenWidth+"px", "height":screenHeight+"px"});
-    }
+    //var screenWidth = screen.availWidth, screenHeight = screen.availHeight;
+    //if (screenWidth > 640) { // 电脑
+        //$("body").css({"width":screenWidth+"px", "height":screenHeight+"px"});
+    //} else { // 手机
+        //$("body").css({"width":screenWidth+"px", "height":screenHeight+"px"});
+    //}
 
 
     $(".enemy .enemy_img").click(function(e){
