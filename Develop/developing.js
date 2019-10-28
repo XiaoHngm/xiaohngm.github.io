@@ -5,6 +5,7 @@ function documentReadyFunction () {
 
 
     var screenWidth = screen.availWidth, screenHeight = screen.availHeight;
+    alert(screenWidth);
     if (screenWidth > 640) { // 电脑
         $("body").css({"width":screenWidth+"px", "height":screenHeight+"px"});
     } else { // 手机
