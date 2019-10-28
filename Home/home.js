@@ -11,3 +11,4 @@ function documentReadyFunction () {
         $("#Game_1 a").attr("href", "Games/Mobile/Whac_A_Mole/game.html");
     }
 }
+
