@@ -252,10 +252,15 @@
     -webkit-animation-delay:0.5s;
     background-image: url(img/gophers-Slice_Gameover.png);
 } @keyframes gameover{
+/*
       0% {top:-465px;}
      97% {top:-465px;}
-    100% {top:0px;}}
-
+    100% {top:0px;}
+*/
+      0% {transform: translateY(-100%);}
+     97% {transform: translateY(-100%);}
+    100% {transform: translateY(0%);}
+}
 
 #score_board{
     /* 绘制记分板 */
@@ -328,6 +333,3 @@
     font-size: 18px;
     line-height: 18px;
     text-align: left;}
-
-body{
-    width:1366px; height:768px;}

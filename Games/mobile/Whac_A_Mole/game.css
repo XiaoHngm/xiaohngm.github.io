@@ -1,0 +1,333 @@
+
+* { position:absolute;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    -webkit-user-select:none;
+    -moz-user-select:none;}
+
+
+.enemy{
+    width:100%; height:100%;
+    display:block;
+    pointer-events:none;
+    -webkit-animation-iteration-count:infinite;
+  /* 动画设置 */
+} .enemy#enemy_1{
+    -webkit-animation-name:enemy_1;
+    -webkit-animation-duration:5s;
+    -webkit-animation-delay:0s;
+} @keyframes enemy_1{
+      0% {transform:translateY(0px);}
+     40% {transform:translateY(-55px);}
+     50% {transform:translateY(0px);}
+     90% {transform:translateY(0px);}
+    100% {transform:translateY(0px);}
+} .enemy#enemy_2{
+    -webkit-animation-name:enemy_2;
+    -webkit-animation-duration:5s;
+    -webkit-animation-delay:1s;
+} @keyframes enemy_2{
+      0% {transform:translateY(0px);}
+     40% {transform:translateY(0px);}
+     50% {transform:translateY(-55px);}
+     90% {transform:translateY(-55px);}
+    100% {transform:translateY(0px);}
+} .enemy#enemy_3{
+    -webkit-animation-name:enemy_3;
+    -webkit-animation-duration:10s;
+    -webkit-animation-delay:2s;
+} @keyframes enemy_3{
+      0% {transform:translateY(0px);}
+     40% {transform:translateY(0px);}
+     50% {transform:translateY(-55px);}
+     60% {transform:translateY(-55px);}
+     90% {transform:translateY(0px);}
+    100% {transform:translateY(0px);}
+} .enemy#enemy_4{
+    -webkit-animation-name:enemy_4;
+    -webkit-animation-duration:10s;
+    -webkit-animation-delay:1s;
+} @keyframes enemy_4{
+      0% {transform:translateY(0px);}
+     30% {transform:translateY(-40px);}
+     50% {transform:translateY(-55px);}
+     60% {transform:translateY(0px);}
+     90% {transform:translateY(0px);}
+    100% {transform:translateY(0px);}
+} .enemy#enemy_5{
+    -webkit-animation-name:enemy_5;
+    -webkit-animation-duration:10s;
+    -webkit-animation-delay:2s;
+} @keyframes enemy_5{
+      0% {transform:translateY(0px);}
+     30% {transform:translateY(-55px);}
+     60% {transform:translateY(-55px);}
+    100% {transform:translateY(0px);}
+} .enemy#enemy_6{
+    -webkit-animation-name:enemy_6;
+    -webkit-animation-duration:5s;
+    -webkit-animation-delay:0s;
+} @keyframes enemy_6{
+      0% {transform:translateY(0px);}
+     40% {transform:translateY(0px);}
+     50% {transform:translateY(-55px);}
+     90% {transform:translateY(-55px);}
+    100% {transform:translateY(0px);}
+} .enemy#enemy_7{
+    -webkit-animation-name:enemy_7;
+    -webkit-animation-duration:5s;
+    -webkit-animation-delay:1s;
+} @keyframes enemy_7{
+      0% {transform:translateY(0px);}
+     20% {transform:translateY(-55px);}
+     30% {transform:translateY(0px);}
+     40% {transform:translateY(-55px);}
+     45% {transform:translateY(0px);}
+     50% {transform:translateY(0px);}
+     90% {transform:translateY(0px);}
+    100% {transform:translateY(0px);}
+} .enemy#enemy_8{
+    -webkit-animation-name:enemy_8;
+    -webkit-animation-duration:10s;
+    -webkit-animation-delay:2s;
+} @keyframes enemy_8{
+      0% {transform:translateY(0px);}
+     10% {transform:translateY(-55px);}
+     15% {transform:translateY(0px);}
+     20% {transform:translateY(-55px);}
+     25% {transform:translateY(0px);}
+     30% {transform:translateY(-55px);}
+     40% {transform:translateY(0px);}
+     50% {transform:translateY(0px);}
+     70% {transform:translateY(0px);}
+     90% {transform:translateY(-55px);}
+    100% {transform:translateY(0px);}
+} .enemy#enemy_9{
+    -webkit-animation-name:enemy_9;
+    -webkit-animation-duration:10s;
+    -webkit-animation-delay:1s;
+} @keyframes enemy_9{
+      0% {transform:translateY(0px);}
+     20% {transform:translateY(0px);}
+     30% {transform:translateY(0px);}
+     60% {transform:translateY(0px);}
+     70% {transform:translateY(-55px);}
+     75% {transform:translateY(-40px);}
+     80% {transform:translateY(-55px);}
+     85% {transform:translateY(-40px);}
+     90% {transform:translateY(-55px);}
+    100% {transform:translateY(0px);}
+} .enemy#enemy_10{
+    -webkit-animation-name:enemy_10;
+    -webkit-animation-duration:10s;
+    -webkit-animation-delay:1s;
+} @keyframes enemy_10{
+      0% {transform:translateY(0px);}
+     5% {transform:translateY(-55px);}
+     30% {transform:translateY(0px);}
+     60% {transform:translateY(0px);}
+     90% {transform:translateY(0px);}
+    100% {transform:translateY(0px);}}
+
+
+.enemy_img {
+    bottom:0px;
+    width:50px; height:47px;
+    display:block;
+    cursor:pointer;
+    opacity:0.5;
+    pointer-events:auto;
+    -webkit-appearance:button;
+    -moz-appearance:button;
+} .enemy_img:hover{
+    opacity:1;
+} .enemy_img:checked{
+    pointer-events:none;
+    opacity:0;
+  /* 地鼠初始位置及图像设置 */
+} #enemy_1  .enemy_img{left: 12px; background-image:url(img/gophers-1.png);
+} #enemy_2  .enemy_img{left: 74px; background-image:url(img/gophers-2.png);
+} #enemy_3  .enemy_img{left:135px; background-image:url(img/gophers-3.png);
+} #enemy_4  .enemy_img{left:196px; background-image:url(img/gophers-4.png);
+} #enemy_5  .enemy_img{left:258px; background-image:url(img/gophers-5.png);
+} #enemy_6  .enemy_img{left: 12px; background-image:url(img/gophers-6.png);
+} #enemy_7  .enemy_img{left: 74px; background-image:url(img/gophers-1.png);
+} #enemy_8  .enemy_img{left:135px; background-image:url(img/gophers-1.png);
+} #enemy_9  .enemy_img{left:196px; background-image:url(img/gophers-1.png);
+} #enemy_10 .enemy_img{left:258px; background-image:url(img/gophers-1.png);}
+
+
+.afraid {
+    bottom:50px;
+    width:50px; height:30px;
+    display:block;
+    opacity:0;
+    background-image: url(img/gophers-afraid.png);
+} #enemy_1  .afraid{left: 12px;
+} #enemy_2  .afraid{left: 74px;
+} #enemy_3  .afraid{left:135px;
+} #enemy_4  .afraid{left:196px;
+} #enemy_5  .afraid{left:258px;
+} #enemy_6  .afraid{left: 12px;
+} #enemy_7  .afraid{left: 74px;
+} #enemy_8  .afraid{left:135px;
+} #enemy_9  .afraid{left:196px;
+} #enemy_10 .afraid{left:258px;
+} .enemy_img:hover + .afraid{opacity:1;}
+
+
+/* 打击特效排版 */
+.effect {
+    width: 106px; height: 98px;
+    background-image: url(img/gophers-Slice_Boom.png);
+    opacity:0;
+  /* 特效排版 */
+} #enemy_1  .effect{bottom:20px; left:0px;
+} #enemy_2  .effect{bottom:20px; left:50px;
+} #enemy_3  .effect{bottom:20px; left:105px;
+} #enemy_4  .effect{bottom:20px; left:164px;
+} #enemy_5  .effect{bottom:20px; left:214px;
+} #enemy_6  .effect{bottom:20px; left:0px;
+} #enemy_7  .effect{bottom:20px; left:50px;
+} #enemy_8  .effect{bottom:20px; left:105px;
+} #enemy_9  .effect{bottom:20px; left:164px;
+} #enemy_10 .effect{bottom:20px; left:214px;
+  /* 特效动画 */
+} .enemy_img:checked + .afraid + .effect {
+    -webkit-animation-duration:0.2s;
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-direction:normal;
+} #enemy_1 .enemy_img:checked + .afraid + .effect,
+  #enemy_2 .enemy_img:checked + .afraid + .effect,
+  #enemy_3 .enemy_img:checked + .afraid + .effect,
+  #enemy_4 .enemy_img:checked + .afraid + .effect,
+  #enemy_5 .enemy_img:checked + .afraid + .effect{
+    -webkit-animation-name:effect1;
+} @keyframes effect1{
+      0% { transform: translateX(0px) translateY(0px); opacity:0;}
+     30% { transform: translateX(-10px) translateY(-10px); opacity:1;}
+     80% { transform: translateX(-10px) translateY(-10px); opacity:1;}
+    100% { transform: translateX(0px) translateY(0px); opacity:0;}
+} #enemy_6  .enemy_img:checked  + .afraid + .effect,
+  #enemy_7  .enemy_img:checked  + .afraid + .effect,
+  #enemy_8  .enemy_img:checked  + .afraid + .effect,
+  #enemy_9  .enemy_img:checked  + .afraid + .effect,
+  #enemy_10 .enemy_img:checked  + .afraid + .effect{
+    -webkit-animation-name:effect2;
+} @keyframes effect2{
+      0% { transform: translateX(0px) translateY(0px); opacity:0;}
+     30% { transform: translateX(10px) translateY(-10px); opacity:1;}
+     80% { transform: translateX(10px) translateY(-10px); opacity:1;}
+    100% { transform: translateX(0px) translateY(0px); opacity:0;}}
+
+
+#body_background{
+    width:100%; height:100%;
+    background-image:url("img/background.jpg");
+    background-repeat:no-repeat;
+    background-size:100%;}
+
+
+#game_area{
+    width:320px; height:376px;
+    border:3px solid rgba(0,0,0,0.6);
+    top:30px; left:50%; transform: translateX(-50%);}
+
+
+#game_background{
+    width:100%; height:100%;
+    background-image: url(img/gophers-Slice_Background.png);
+    z-index:5;}
+
+
+#gameover{
+    /* 游戏结束背景 */
+    width:100%; height:100%;
+    z-index:10;
+    -webkit-animation-name:gameover;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-duration:13s;
+    -webkit-animation-delay:0.5s;
+    background-image: url(img/gophers-Slice_Gameover.png);
+} @keyframes gameover{
+      0% {transform: translateY(-100%);}
+     97% {transform: translateY(-100%);}
+    100% {transform: translateY(   0%);}}
+
+
+#score_board{
+    /* 绘制记分板 */
+    left:50%; transform: translateX(-50%); top:70px;
+    width:157px; height:105px;
+    background-image: url(img/gophers-Slice_Scoreboard.png);
+    z-index:6;}
+
+
+#score_wrap{
+    /* 分数 显示区域 */
+    width: 110px; height: 61px;
+    left:50%; transform: translateX(-50%); top:22px;}
+
+
+#score{
+    /* 分数条 设置起始位置,通过JS脚本控制它的位置 */
+    width: 110px; height: 691px;
+    top: -630px;
+    background-image: url(img/gophers-Slice_Score-2.png);}
+
+
+#enemy_area{
+    /* 土拨鼠 显示区域 */
+    width:320px; height:180px;
+    bottom:76px;
+    z-index:7;}
+
+
+#mound{
+    width:320px; height:170px;
+    top:170px;
+    background-image: url(img/gophers-Slice_Mound.png);
+    pointer-events:none;
+    display:block;
+    z-index:8;}
+
+
+#mound_mask{
+    width:320px; height:90px;
+    top:80px;
+    pointer-events:auto;}
+
+
+#timer{
+    width:305px; height:50px;
+    left:50%; transform: translateX(-50%); top:310px;
+    z-index:9;
+    background-image:url(img/gophers-Slice_Timeboard.png);}
+
+
+#progress{
+    width:170px; height:36px;
+    left:114px; top:7px;
+    -webkit-animation-name:progress;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-duration:12.5s;
+    -webkit-animation-delay:0.5s;
+    background-image:url(img/gophers-Slice_time-line.png);
+} @keyframes progress{
+      0% {width:  0px;}
+    100% {width:170px;}}
+
+
+#copyright {
+    left: 50px; top: 600px;
+    color: rgba(255,255,255,0.7);
+    font-family: "Lucida Console";
+    font-size: 18px;
+    line-height: 18px;
+    text-align: left;}
+
+
+body {
+    /* 会根据JS脚本自动重新设定 */
+    width:0px; height:0px;}

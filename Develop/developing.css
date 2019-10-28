@@ -4,20 +4,23 @@
 }
 
 body {
-    width: 1366px;
-    height: 500px;
+    width: 1366px; height: 500px;
 }
 
 #score_board{
     /* 绘制记分板 */
     top: 185px;
-    left: 85px;
+    left: 50%;
     width: 157px;
     height: 105px;
     background-image:  url(../Games/Whac_A_Mole/img/gophers-Slice_Scoreboard.png);
     background-position: 0px -10px;
     background-repeat: no-repeat;
     z-index: 10;
+/*
+    transform: translateX(-50%);
+    transform: translateX(0%);
+*/
 }
 
 #score_wrap{
@@ -36,6 +39,16 @@ body {
     width:  111px;
     height:  691px;
     background-image:  url(../Games/Whac_A_Mole/img/gophers-Slice_Score-2.png);
+}
+
+#background{
+    top:  30px;
+    left: 50px;
+    width:  320px;
+    height:  480px;
+    background-image:  url(../Games/Whac_A_Mole/img/background.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .score {

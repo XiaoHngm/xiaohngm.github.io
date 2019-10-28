@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Whac A Mole</title>
+    <link rel="stylesheet" type="text/css" href="game.css" />
+  </head>
+
+  <body>
+    <div id="body_background"></div>
+
+    <div id="game_area">
+      <!-- 游戏背景 -->
+      <div id="game_background"></div>
+
+      <!-- 游戏结束画面 -->
+      <a id="gameover" href=""></a>
+
+      <!-- 时间进度条 -->
+      <div id="timer"><div id="progress"></div></div>
+
+      <!-- 土堆 -->
+      <div id="mound"><div id="mound_mask"></div></div>
+
+      <!-- 土拨鼠 -->
+      <div id="enemy_area">
+        <div id="enemy_1" class="enemy">
+          <input type="radio" class="enemy_img">
+          <div class="afraid"></div>
+          <div class="effect"></div>
+        </div>
+        <div id="enemy_2" class="enemy">
+          <input type="radio" class="enemy_img">
+          <div class="afraid"></div>
+          <div class="effect"></div>
+        </div>
+        <div id="enemy_3" class="enemy">
+          <input type="radio" class="enemy_img">
+          <div class="afraid"></div>
+          <div class="effect"></div>
+        </div>
+        <div id="enemy_4" class="enemy">
+          <input type="radio" class="enemy_img">
+          <div class="afraid"></div>
+          <div class="effect"></div>
+        </div>
+        <div id="enemy_5" class="enemy">
+          <input type="radio" class="enemy_img">
+          <div class="afraid"></div>
+          <div class="effect"></div>
+        </div>
+        <div id="enemy_6" class="enemy">
+          <input type="radio" class="enemy_img">
+          <div class="afraid"></div>
+          <div class="effect"></div>
+        </div>
+        <div id="enemy_7" class="enemy">
+          <input type="radio" class="enemy_img">
+          <div class="afraid"></div>
+          <div class="effect"></div>
+        </div>
+        <div id="enemy_8" class="enemy">
+          <input type="radio" class="enemy_img">
+          <div class="afraid"></div>
+          <div class="effect"></div>
+        </div>
+        <div id="enemy_9" class="enemy">
+          <input type="radio" class="enemy_img">
+          <div class="afraid"></div>
+          <div class="effect"></div>
+        </div>
+        <div id="enemy_10" class="enemy">
+          <input type="radio" class="enemy_img">
+          <div class="afraid"></div>
+          <div class="effect"></div>
+        </div>
+      </div>
+
+      <!-- 计分板 -->
+      <div id="score_board"><div id="score_wrap"><div id="score"></div></div></div>
+    </div>
+
+    <p id="copyright">本游戏参考《HTML5跨平台游戏设计》一书制作，仅供学习</p>
+  </body>
+
+  <script src="../../../Js/jquery-1.4.3.min.js"></script>
+  <script src="game.js"></script>
+  <script> $(document).ready(documentReadyFunction) </script>
+</html>
