@@ -1,11 +1,27 @@
-<!doctype html>
+
+<!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="utf-8">
     <title>Developing...</title>
+    <link rel="stylesheet" type="text/css" href="developing.css">
+    <script src="jquery-1.4.3.min.js"></script>
+    <script src="developing.js"></script>
+    <script> $(document).ready(documentReadyFunction) </script>
   </head>
 
   <body>
-    <p style="font-size:30px" align="center">开发中......</p>
+    <p style="font-size:30px;left:50px" align="center">开发中......</p>
+    <p id="log"></p>
+    <input type="radio" id="s5core" class="score" value="2">
+    <div>DIV<p style="left:50px" class="P">KK</p></div>
+
+    <!-- 计分板 -->
+    <div id="score_board">
+      <div id="score_wrap">
+          <div id="score"></div>
+      </div>
+    </div>
   </body>
 </html>
