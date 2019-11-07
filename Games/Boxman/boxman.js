@@ -3,7 +3,7 @@ var mission1 = false;
 var mission2 = false;
 
 // 1.当加载窗口时就执行
-window.addEventListener("load",function(){
+window.addEventListener("load", function(){
 
     //创建一个初始化Quintus基本对象和设置之
     //开发者模式会自动重载资源
