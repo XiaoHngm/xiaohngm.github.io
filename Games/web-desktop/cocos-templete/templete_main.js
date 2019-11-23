@@ -193,4 +193,4 @@ window.boot = function () {
 
     //cc.macro.CLEANUP_IMAGE_CACHE = true;
     //window.boot();
-}
+//}
