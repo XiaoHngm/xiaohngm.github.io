@@ -1,4 +1,3 @@
-
 window._CCSettings={
     platform:"web-desktop",
     groupList:["default"],
