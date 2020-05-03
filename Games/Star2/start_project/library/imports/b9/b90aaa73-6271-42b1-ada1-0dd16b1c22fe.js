@@ -1,6 +1,6 @@
 "use strict";
-cc._RF.push(module, 'b90aapzYnFCsa2hDdFrHCL+', 'Game');
-// scripts/Game.js
+cc._RF.push(module, 'b90aapzYnFCsa2hDdFrHCL+', 'GameScene');
+// scripts/GameScene.js
 
 'use strict';
 
@@ -36,27 +36,24 @@ cc.Class({
         this.groundY = this.ground.y + this.ground.height / 2;
         // 初始化计时器
         this.score = 0;
+        this.isPicked = false;
         // 生成一个新的星星
         this.spawnNewStar();
     },
 
     start: function start() {},
 
-
     update: function update(dt) {
-        console.log("adsa");
-        if (this.star.getComponent('Star').timer > this.star.getComponent('Star').starDuration) {
-            //超过限度还没有摘到星星
-            this.gameOver(); // 调用游戏结束
-        } else if (this.getPlayerDistance() < this.pickRadius) {
-            //判断星星和主角之间的距离是否小于收集距离
-            this.starPicked(); //调用收集行为
-        } else ;
-    },
-
-    gameOver: function gameOver() {
-        this.player.stopAllActions(); //停止 player 节点的跳跃动作
-        cc.director.loadScene('game');
+        if (!this.isPicked) {
+            // 还没有摘到星星
+            if (this.star.getComponent('Star').timer > this.star.getComponent('Star').starDuration) {
+                //超过时限
+                this.gameOver(); // 调用游戏结束
+            } else if (this.getPlayerDistance() < this.pickRadius) {
+                //判断星星和主角之间的距离是否小于收集距离
+                this.starPicked(); //调用收集行为
+            }
+        }
     },
 
     spawnNewStar: function spawnNewStar() {
@@ -69,6 +66,13 @@ cc.Class({
         // 根据地平面位置和主角跳跃高度，随机得到一个星星的 y 坐标
         var randY = this.groundY + Math.random() * this.player.getComponent('Player').jumpHeight + 50;
         this.star.setPosition(cc.v2(randX, randY));
+
+        this.isPicked = false;
+    },
+
+    gameOver: function gameOver() {
+        //this.player.stopAllActions(); //停止 player 节点的跳跃动作
+        cc.director.loadScene('game over scene');
     },
 
     getPlayerDistance: function getPlayerDistance() {
@@ -82,21 +86,27 @@ cc.Class({
     starPicked: function starPicked() {
         // 调用 Game 脚本的得分方法
         this.gainScore();
+        // 动画
+        var pickedAction = this.star.getComponent('Star').setPickedAction();
         // 然后销毁当前星星节点
-        this.star.destroy();
-        // 当星星被收集时，生成一个新的星星
-        this.spawnNewStar();
+        var destroyStar = cc.callFunc(function () {
+            this.star.destroy();
+        }, this);
+        // 生成一个新的星星
+        var spawnStar = cc.callFunc(function () {
+            this.spawnNewStar();
+        }, this);
+        this.star.runAction(cc.sequence(pickedAction, destroyStar, spawnStar));
     },
 
     gainScore: function gainScore() {
         this.score += 1;
+        this.isPicked = true;
         // 更新 scoreDisplay Label 的文字
         this.scoreDisplay.string = 'Score: ' + this.score.toString();
         // 播放得分音效
         cc.audioEngine.playEffect(this.scoreAudio, false);
-    },
-
-    genPlayer: function genPlayer() {}
+    }
 });
 
 cc._RF.pop();
