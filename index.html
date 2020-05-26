@@ -7,47 +7,33 @@
     <link rel="stylesheet" type="text/css" href="Home/home.css"/>
   </head>
 
+  
   <body>
-
     <div id="banner">
-      <nav>
-        <a id="nav_font" href="Develop/developing.html">关于我们</a>
-      </nav>
+      <nav></nav>
 
       <header>
         <p id="header_title">LinYuanGe</p>
-        <input id="header_search" type="text">
-        <img id="header_icon" src="Home/img/search.png" title="搜索">
         <p id="header_copyright">Photo by Yeshi Kangrang on Unsplash</p>
       </header>
     </div>
 
+    
     <div id="content">
-      <aside>
-        <ul>
-          <li><a href="https://developer.mozilla.org/zh-CN">Web开发手册</a></li>
-        </ul>
-      </aside>
-
-      <article id="Game_1">
-        <img src="Games/Whac_A_Mole/img/gophers-1.png" title="打地鼠" >
-        <a>打地鼠</a>
-      </article>
-
-      <article id="Game_2">
-        <a>待开发......</a>
-      </article>
-      <article id="Game_3">
-        <a>待开发......</a>
-      </article>
+      <article id="Game_1" class="Game"><a>打地鼠</a></article>
+      <article id="Game_2" class="Game"><a href="Games/Crazy Gopher/web-mobile/index.html">疯狂的地鼠</a></article>
+      <article id="Game_3" class="Game"><a href="Games/Star Catcher/web-mobile/index.html">摘星星</a></article>
+      <article id="Game_4" class="Game"><a href="Games/Chess/web-mobile/index.html">战棋</a></article>
+      <article id="Game_5" class="Game"><a>开发中...</a></article>
     </div>
 
+    
     <footer>
       <p id="footer_text">@2019 Welcom to LinYuanGe</p>
     </footer>
-
   </body>
 
+  
   <script src="Js/jquery-1.4.3.min.js"></script>
   <script type="text/javascript" src="Home/home.js"></script>
   <script> $(document).ready(documentReadyFunction) </script>
